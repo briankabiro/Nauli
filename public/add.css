@@ -1,0 +1,181 @@
+#container{
+	display:flex;
+	flex-flow:column;
+}
+.banner{
+	background-color:#446CB3;
+	text-align:center;
+	margin-bottom: 1em;
+	display: flex;
+	flex-direction: column;
+}
+.home-link{
+	align-self: flex-start;
+	border-radius:100%;
+	background-color: white;
+	color:#446CB3;
+	font-weight:bold;
+	width:2em;
+	height:2em;
+	margin-left:0.5em;
+	margin-top:0.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: cursive;
+}
+.banner h2{
+	font-family: Century Gothic;
+	color:white;
+}
+.banner a{
+	text-decoration: none;
+}
+#route-searcher{
+	margin-bottom:1em;
+	display:flex;
+	flex-direction: column;		
+}
+.route-input{
+	display:flex;
+	justify-content:space-around;
+}
+#route-searcher input{
+	margin-top:0.5em;
+	font-family: Arial;
+	border:1px solid grey;
+	padding:0.5em;
+}
+#route-searcher label{
+	font-weight: bold;
+	font-size:1.1em;
+	margin-top: 0.5em;
+}
+.fare-inputs{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#fare-add-div{
+	border:0.1em solid #446CB3;
+	background-color: #446CB3;
+	height:15em;
+	width:12em;
+	display: flex;
+	flex-flow:column;
+	align-items: center;
+	margin-bottom: 1em;
+	box-shadow:5px 5px 5px grey;
+}
+#fare-add-div * {
+	color:white;
+}
+#fare-add-div h1{
+	text-align: center;
+	font-family: Century Gothic;
+}
+#fare-add-div label{
+	font-size:1.1em;
+	font-family: Calibri;
+}
+#fare-add-div input{
+	border:none;
+	border-bottom:1px solid grey;
+	font-size:1.2em;
+	text-align:center;
+	width:5em;
+	color:black;
+}
+.submit-button{
+	width:10em;
+	padding:1em;
+	background-color: indigo;
+	color:white;
+	border:0.1em solid white;
+	align-self: center;
+}
+
+@media only screen and (min-width:768px){
+	.home-link{
+		align-self: flex-start;
+		border-radius:100%;
+		background-color: white;
+		color:#446CB3;
+		font-weight:bold;
+		width:3em;
+		height:3em;
+		margin-left:0.5em;
+		margin-top:0.5em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: cursive;
+	}
+	.banner a{
+		text-decoration: none;
+	}
+	#route-adder{
+		margin-bottom:1em;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	#route-adder input{
+		width:15em;
+		border:1px solid grey;
+		padding:0.5em;
+		margin-top:0.5em;	
+		font-family: Calibri;
+		font-size:1.1em;
+	}
+	#route-adder label{
+		font-weight: bold;
+		font-size:1.2em;
+		margin-top: 0.5em;
+	}
+	.fare-inputs{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	#fare-add-div{
+		border:0.1em solid #446CB3;
+		background-color: #446CB3;
+		height:17em;
+		width:12em;
+		display: flex;
+		flex-flow:column;
+		align-items: center;
+		margin-bottom: 2em;			
+		box-shadow:5px 5px 5px grey;
+	}
+	#fare-add-div * {
+		color:white;
+	}
+	#fare-add-div h1{
+		text-align: center;
+		font-family: Century Gothic;
+	}
+	#fare-add-div label{
+		font-size:1.1em;
+		font-family: Calibri;
+	}
+	#fare-add-div input{
+		border:none;
+		border-bottom:1px solid grey;
+		font-size:1.2em;
+		text-align:center;
+		width:5em;
+		color:black;
+		height:1.5em;
+	}
+	.submit-button{
+		width:7em;
+		padding:1em;
+		background-color: indigo;
+		color:white;
+		font-weight:bold;
+		font-size:1em;
+		align-self: center;
+	}	
+}

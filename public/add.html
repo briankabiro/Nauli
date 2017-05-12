@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add a route</title>
+	<link rel="stylesheet" type="text/css" href="add.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+</head>
+<body>
+	<div id="container">
+		<div class="banner">
+			<a href="index.html"><span class="home-link">N</span></a>
+			<h2>Add A Route</h2>
+		</div>
+		<div id="route-searcher">
+			<div class="route-input">
+				<label>From:</label>
+				<input type="text" name="route1">
+			</div>
+			<div class="route-input">
+				<label>To:</label>
+				<input type="text" name="route2">
+			</div>	
+		</div>
+		<div class="fare-inputs">
+		<!-- Set input requirements to be a number that ends with zero/multiple of ten, at least one should be inputted for button to become active Vue js input binding so that button is toggled active when one is completed, off-peak cannot be higher than peak
+		add box shadow to bus-div
+		-->
+			<div id="fare-add-div">
+				<h1>Bus</h1>
+				<label>Peak</label><br/>
+				<input type="text" name="Peak"><br/>
+				<label>Off-peak</label><br/>
+				<input type="text" name="Offpeak">
+			</div>
+			<div id="fare-add-div">
+				<h1>Mathree</h1>
+				<label>Peak</label><br/>
+				<input type="text" name="Peak"><br/>
+				<label>Off-peak</label><br/>
+				<input type="text" name="Offpeak">
+			</div>
+			<div id="fare-add-div">
+				<h1>Matatu</h1>
+				<label>Peak</label><br/>
+				<input type="text" name="Peak"><br/>
+				<label>Off-peak</label><br/>
+				<input type="text" name="Offpeak">
+			</div>			
+		</div>
+		<button class="submit-button">Submit</button>
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://unpkg.com/vue"></script>
+	<script src = "add.js"></script>	
+</body>
+</html>

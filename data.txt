@@ -1,0 +1,30 @@
+6 p.m - 10 am = 100
+4 p.m - 9 p.m = 100
+
+10 - 4 p
+
+Ongata Rongai : [{
+	place: Nairobi,
+	bus:{
+		peak: 70,
+		offpeak:30	
+	},
+	mathree:{
+		peak:100
+		offpeak:60
+	},
+	matatu:{
+		peak:100
+		offpeak:70
+	},
+}]
+
+Nairobi:[{
+	place:Ongata Rongai,
+	peak:100,
+	off-peak:50
+},{
+	place:Utawala,
+	peak:100,
+	off-peak:50
+}]
