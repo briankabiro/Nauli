@@ -11,46 +11,48 @@
 			<a href="index.html"><span class="home-link">N</span></a>
 			<h2>Add A Route</h2>
 		</div>
-		<div id="route-searcher">
-			<div class="route-input">
-				<label>From:</label>
-				<input type="text" name="route1">
+		<form>
+			<div id="route-searcher">
+				<div class="route-input">
+					<label>From:</label>
+					<input type="text" id="location1"  name="route1" required autofocus>
+				</div>
+				<div class="route-input">
+					<label>To:</label>
+					<input type="text" name="route2" id="location2" required>
+				</div>	
 			</div>
-			<div class="route-input">
-				<label>To:</label>
-				<input type="text" name="route2">
-			</div>	
-		</div>
-		<div class="fare-inputs">
-		<!-- Set input requirements to be a number that ends with zero/multiple of ten, at least one should be inputted for button to become active Vue js input binding so that button is toggled active when one is completed, off-peak cannot be higher than peak
-		add box shadow to bus-div
-		-->
-			<div id="fare-add-div">
-				<h1>Bus</h1>
-				<label>Peak</label><br/>
-				<input type="text" name="Peak"><br/>
-				<label>Off-peak</label><br/>
-				<input type="text" name="Offpeak">
+			<div class="fare-inputs">
+			<!-- Set input requirements to be a number that ends with zero/multiple of ten, at least one should be inputted for button to become active Vue js input binding so that button is toggled active when one is completed, off-peak cannot be higher than peak
+			add box shadow to bus-div
+			-->
+				<div id="fare-add-div">
+					<h1>Bus</h1>
+					<label>Peak</label><br/>
+					<input type="text" name="Peak" id="bus-peak"><br/>
+					<label>Off-peak</label><br/>
+					<input type="text" name="Offpeak" id="bus-offpeak">
+				</div>
+				<div id="fare-add-div">
+					<h1>Mathree</h1>
+					<label>Peak</label><br/>
+					<input type="text" name="Peak" id="mathree-peak"><br/>
+					<label>Off-peak</label><br/>
+					<input type="text" id="mathree-offpeak" name="Offpeak">
+				</div>
+				<div id="fare-add-div">
+					<h1>Matatu</h1>
+					<label>Peak</label><br/>
+					<input id="matatu-peak" type="text" name="Peak" required><br/>
+					<label>Off-peak</label><br/>
+					<input id="matatu-offpeak" type="text" name="Offpeak" required>
+				</div>			
+				<button class="submit-button">Submit</button>
 			</div>
-			<div id="fare-add-div">
-				<h1>Mathree</h1>
-				<label>Peak</label><br/>
-				<input type="text" name="Peak"><br/>
-				<label>Off-peak</label><br/>
-				<input type="text" name="Offpeak">
-			</div>
-			<div id="fare-add-div">
-				<h1>Matatu</h1>
-				<label>Peak</label><br/>
-				<input type="text" name="Peak"><br/>
-				<label>Off-peak</label><br/>
-				<input type="text" name="Offpeak">
-			</div>			
-		</div>
-		<button class="submit-button">Submit</button>
+		</form>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
 	<script src="/socket.io/socket.io.js"></script>
-	<script src="https://unpkg.com/vue"></script>
 	<script src = "add.js"></script>	
 </body>
 </html>

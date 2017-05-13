@@ -87,7 +87,7 @@
 	color:black;
 }
 .submit-button{
-	width:10em;
+	width:7em;
 	padding:1em;
 	background-color: indigo;
 	color:white;
@@ -114,29 +114,27 @@
 	.banner a{
 		text-decoration: none;
 	}
-	#route-adder{
-		margin-bottom:1em;
+	#route-searcher{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	#route-adder input{
-		width:15em;
+	.route-input input{
 		border:1px solid grey;
 		padding:0.5em;
 		margin-top:0.5em;	
 		font-family: Calibri;
 		font-size:1.1em;
 	}
-	#route-adder label{
-		font-weight: bold;
-		font-size:1.2em;
+	.route-input label{
+		font-size:1.4em;
 		margin-top: 0.5em;
+		margin-right: 1em;
 	}
 	.fare-inputs{
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content:space-around;
 	}
 	#fare-add-div{
 		border:0.1em solid #446CB3;
@@ -176,6 +174,5 @@
 		color:white;
 		font-weight:bold;
 		font-size:1em;
-		align-self: center;
 	}	
 }
