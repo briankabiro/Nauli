@@ -33,7 +33,9 @@ app.get('add', function(req,res){
 io.on('connection', function(socket){
 
 	socket.on('search', function(data){
-		console.log(data.one, data.two)
+		data.one = data.one.toLowerCase();
+		data.two = data.two.toLowerCase();
+		console.log(data.one, data.two)		
 		MongoClient.connect(URL, function(err,db){
 			if(err) console.log("Error",err);
 			var collection = db.collection('places');
