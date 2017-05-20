@@ -7,7 +7,6 @@ document.querySelector('form').addEventListener("submit", function(e){
 })
 
 socket.on('data', function(data){
-	console.log(data)
 	$(".info").html("<p>Fare from <b>"+ data.from +"</b> to <b>" + data.to + "</b> using a: </p>")
 	$("#results").html("<div><h2>Bus</h2><p>Peak : "+ data.bus.peak+"</p><p>Offpeak : "+ data.bus.offpeak +"</p></div><div><h2>Mathree</h2><p>Peak : "+data.mathree.peak+"</p><p>Offpeak : "+ data.mathree.offpeak +"</p></div><div><h2>Matatu</h2><p>Peak : "+data.matatu.peak+"</p><p>Offpeak : "+ data.matatu.offpeak +"</p></div>")
 	$("#results div").css({
@@ -16,10 +15,10 @@ socket.on('data', function(data){
 		"display":"flex",
 		"flex-direction":"column",
 		"align-items":"center",
-		"background-color":"#795548",
+		"background-color":"#1abc9c",
 		"margin-bottom":"1em",
 		"align-self":"center",
-		"box-shadow":"1px 1px 5px grey"
+		"box-shadow":"2px 2px 7px grey"
 	})
 	$("#results h2").css({
 		"text-align":"center",
@@ -31,20 +30,23 @@ socket.on('data', function(data){
 		"color":"white"
 	})
 	$(".info p").css({
-		"font-size":"1.1em"
+		"font-size":"1.3em",
+		"text-align":"center"
 	})
 })
 
 socket.on('none',function(){
 	$("#results").html("<div><p>Hiyo bado hatujaweka kwa mtandao. Unaweza i-seti by clicking 'Add a route' hapo juu</p></div>")
 	$("#results div").css({
-		"background-color":"#f44336"
+		"background-color":"#B33A3A",
+		"margin-top":"0.5em"
 	})
 	$("#results div p").css({
 		"font-family":"Arial",
 		"color":"#fafafa",
 		"font-size":"1.2em",
 		"text-align":"center",
-		"box-shadow":"1px grey"
+		"box-shadow":"1px grey",
+		"padding":"0.5em"
 	})
 })
