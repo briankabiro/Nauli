@@ -18,7 +18,7 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server)
 var MongoClient = require('mongodb').MongoClient;
 var path = require('path');
-var URL = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/test1';
+var URL = process.env.MONGODB_URI || 'mongodb://localhost:27017/test1';
 
 app.use(express.static(__dirname + '/public'));
 var port = process.env.PORT || 3000;
