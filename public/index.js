@@ -36,7 +36,7 @@ socket.on('data', function(data){
 })
 
 socket.on('none',function(){
-	$("#results").html("<div><p>Hiyo bado hatujaweka kwa mtandao. Unaweza i-seti by clicking 'Add a route' hapo juu</p></div>")
+	$("#results").html("<div><p>Unfortunately, we don't have that route in our system. Add it by clicking 'Add a route at the top of the page'"</p></div>")
 	$("#results div").css({
 		"background-color":"#B33A3A",
 		"margin-top":"0.5em"
