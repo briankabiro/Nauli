@@ -19,6 +19,9 @@ var io = require('socket.io')(server)
 var MongoClient = require('mongodb').MongoClient;
 var path = require('path');
 var URL = process.env.MONGODB_URI || 'mongodb://localhost:27017/test1';
+var nodemailer = require('nodemailer');
+var bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.use(express.static(__dirname + '/public'));
 var port = process.env.PORT || 3000;
@@ -27,10 +30,10 @@ app.get('*', function(req,res){
 	res.sendFile(path.join(__dirname + '/public/index.html'))
 });
 
-app.get('add', function(req,res){
+/*app.get('add', function(req,res){
 	res.sendFile(path.join(__dirname + '/public/add.html'))
 })
-
+*/
 io.on('connection', function(socket){
 
 	socket.on('search', function(data){
@@ -49,6 +52,33 @@ io.on('connection', function(socket){
 				}
 				db.close();
 			})
+		})		
+	})
+	socket.on('add',function(data){
+		data = JSON.stringify(data)
+		console.log(data)
+		let transporter = nodemailer.createTransport({
+		service:'gmail',
+		auth:{
+			user:'mpesaconmen@gmail.com',
+			pass:"mpesa12713B"
+			}
+		}) 
+
+		let mailOptions = {
+			from: 'mpesaconmen@gmail.com',
+			to:'mpesaconmen@gmail.com',
+			subject:'Nauli App',
+			text:data
+		}
+		
+		transporter.sendMail(mailOptions, function(error, info){
+			if (error){
+				console.error(error)	
+			}else{
+				console.log('Success!! Message sent:' + info.response);
+				socket.emit("email")
+			}	
 		})		
 	})
 })

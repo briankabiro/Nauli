@@ -8,7 +8,7 @@ document.querySelector('form').addEventListener("submit", function(e){
 
 socket.on('data', function(data){
 	$(".info").html("<p>Fare from <b>"+ data.from +"</b> to <b>" + data.to + "</b> using a: </p>")
-	$("#results").html("<div><h2>Bus</h2><p>Peak : "+ data.bus.peak+"</p><p>Offpeak : "+ data.bus.offpeak +"</p></div><div><h2>Mathree</h2><p>Peak : "+data.mathree.peak+"</p><p>Offpeak : "+ data.mathree.offpeak +"</p></div><div><h2>Matatu</h2><p>Peak : "+data.matatu.peak+"</p><p>Offpeak : "+ data.matatu.offpeak +"</p></div>")
+	$("#results").html("<div><h2>Bus</h2><p>Peak : "+ data.bus.peak+"</p><p>Offpeak : "+ data.bus.offpeak +"</p></div><div><h2>Nganya</h2><p>Peak : "+data.mathree.peak+"</p><p>Offpeak : "+ data.mathree.offpeak +"</p></div><div><h2>Matatu</h2><p>Peak : "+data.matatu.peak+"</p><p>Offpeak : "+ data.matatu.offpeak +"</p></div>")
 	$("#results div").css({
 		"height":"14em",
 		"width":"10em",

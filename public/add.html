@@ -11,7 +11,7 @@
 			<a href="index.html"><span class="home-link">N</span></a>
 			<h2>Add A Route</h2>
 		</div>
-		<form>
+		<form id="fare-sending-form">
 			<div id="route-searcher">
 				<div class="route-input">
 					<label>From:</label>
@@ -23,31 +23,28 @@
 				</div>	
 			</div>
 			<div class="fare-inputs">
-			<!-- Set input requirements to be a number that ends with zero/multiple of ten, at least one should be inputted for button to become active Vue js input binding so that button is toggled active when one is completed, off-peak cannot be higher than peak
-			add box shadow to bus-div
-			-->
 				<div id="fare-add-div">
 					<h1>Bus</h1>
 					<label>Peak</label><br/>
-					<input type="text" name="Peak" id="bus-peak"><br/>
+					<input type="text" name="Peak" pattern = "\b([1-3]*[0-9]{1}[0])\b" id="bus-peak"><br/>
 					<label>Off-peak</label><br/>
-					<input type="text" name="Offpeak" id="bus-offpeak">
+					<input type="text" name="Offpeak" pattern = "/\b([1-3]*[0-9]{1}[0])\b/g" id="bus-offpeak">
 				</div>
 				<div id="fare-add-div">
-					<h1>Mathree</h1>
+					<h1>Nganya</h1>
 					<label>Peak</label><br/>
-					<input type="text" name="Peak" id="mathree-peak"><br/>
+					<input type="text" name="Peak" id="mathree-peak" pattern ="/\b([1-3]*[0-9]{1}[0])\b/g"><br/>
 					<label>Off-peak</label><br/>
-					<input type="text" id="mathree-offpeak" name="Offpeak">
+					<input type="text" id="mathree-offpeak" name="Offpeak" pattern="/\b([1-3]*[0-9]{1}[0])\b/g">
 				</div>
 				<div id="fare-add-div">
 					<h1>Matatu</h1>
 					<label>Peak</label><br/>
-					<input id="matatu-peak" type="text" name="Peak" required><br/>
+					<input id="matatu-peak" type="text" name="Peak" required pattern="\b([1-3]*[0-9]{1}[0])\b"><br/>
 					<label>Off-peak</label><br/>
-					<input id="matatu-offpeak" type="text" name="Offpeak" required>
+					<input id="matatu-offpeak" type="text" name="Offpeak" required pattern = "\b([1-3]*[0-9]{1}[0])\b">
 				</div>			
-				<button class="submit-button">Submit</button>
+				<button type="submit" class="submit-button">Submit</button>
 			</div>
 		</form>
 	</div>

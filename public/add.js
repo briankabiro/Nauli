@@ -10,5 +10,17 @@ document.querySelector('form').addEventListener("submit", function(e){
 	var matatuOffpeak = document.getElementById('matatu-offpeak')
 	e.preventDefault();
 
-	socket.emit('add',{one:location1, two:location2, three:busPeak, four:busOffpeak, five:mathreePeak, six:mathreeOffpeak, seven:matatuPeak, eight:matatuOffpeak})
+	socket.emit('add',{location1:location1, location2:location2, busPeakFare:busPeak, busOffpeakFare:busOffpeak, mathreePeakFare:mathreePeak, mathreeOffpeakFare:mathreeOffpeak, matatuPeakFare:matatuPeak, matatuOffpeakFare:matatuOffpeak})
+})
+socket.on('email', function(){
+	$(".fare-inputs").append("<div class='response'><p>Thank You! We have received your message</p></div>")
+	$(".response").css({
+		"background-color":"#c0392b",
+		"padding":"0.1em",
+		"margin-top":"0.5em"
+	})
+	$(".response p").css({
+		"color":"white",
+		"font-family":"Calibri"
+	})
 })
